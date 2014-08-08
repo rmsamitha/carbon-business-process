@@ -28,6 +28,7 @@ import org.wso2.carbon.humantask.TDeadline;
 import org.wso2.carbon.humantask.TDeadlines;
 import org.wso2.carbon.humantask.TPresentationElements;
 import org.wso2.carbon.humantask.TPriorityExpr;
+import org.wso2.carbon.humantask.TRenderings;
 import org.wso2.carbon.humantask.TTask;
 import org.wso2.carbon.humantask.core.CallBackService;
 import org.wso2.carbon.humantask.core.dao.TaskPackageStatus;
@@ -42,6 +43,7 @@ import org.wso2.carbon.humantask.core.utils.HumanTaskStoreUtils;
 import javax.wsdl.Definition;
 import javax.wsdl.PortType;
 import javax.xml.namespace.QName;
+
 import java.io.File;
 import java.util.List;
 
@@ -272,4 +274,15 @@ public class TaskConfiguration extends HumanTaskBaseConfiguration {
     public void setCallBackService(CallBackService callBackService) {
         this.callBackService = callBackService;
     }
+    
+ 
+
+	@Override
+	public TRenderings getRenderings() {
+		// TODO Auto-generated method stub
+		return task.getRenderings();
+	}
+		
+    	
+    
 }
